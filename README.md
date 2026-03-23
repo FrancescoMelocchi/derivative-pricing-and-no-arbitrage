@@ -100,11 +100,19 @@ The repository includes all datasets required for reproducibility:
 
 ## How to Run
 
-All scripts are independent and can be run separately in MATLAB.
+The project relies on the datasets included in the repository and, in some cases, on supporting MATLAB scripts/functions.
 
-Some scripts depend on:
-- `BSPrice.m`
-- datasets included in the repository
+Before running the code:
+- make sure all `.m` files and datasets are stored in the same working directory, or update file paths accordingly;
+- ensure that `BSPrice.m` is available in the MATLAB path;
+- run the scripts from MATLAB with the repository folder set as the current working directory.
+
+Some scripts can be executed independently, while others rely on intermediate components such as:
+- market datasets (`.xlsx` files),
+- `BSPrice.m`,
+- outputs or variables produced by related scripts.
+
+In particular, the structured product pricing module depends on the interest-rate and market analysis components used to construct zero rates and volatility inputs.
 
 
 ## Author
